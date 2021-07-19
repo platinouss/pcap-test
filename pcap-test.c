@@ -45,7 +45,7 @@ void pkt_print(struct libnet_ethernet_hdr* ethernet, struct libnet_ipv4_hdr* ip,
             printf("%02x\n", ethernet->ether_shost[i]);
     }
 
-    printf("Source Address: %s\n", inet_ntoa(ip->ip_src));       //eth = (struct libnet_ethernet_hdr *) packet;
+    printf("Source Address: %s\n", inet_ntoa(ip->ip_src));
     printf("Destination Address: %s\n", inet_ntoa(ip->ip_dst));
     printf("Source Port: %d\n", ntohs(tcp->th_sport));
     printf("Destination Port: %d\n", ntohs(tcp->th_dport));
