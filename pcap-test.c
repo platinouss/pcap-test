@@ -49,7 +49,7 @@ void pkt_print(struct libnet_ethernet_hdr* ethernet, struct libnet_ipv4_hdr* ip,
     printf("Destination Address: %s\n", inet_ntoa(ip->ip_dst));
     printf("Source Port: %d\n", ntohs(tcp->th_sport));
     printf("Destination Port: %d\n", ntohs(tcp->th_dport));
-    printf("TCP payload: ");
+    printf("Payload(Data): ");
     if (payload_len > 0) {
         for(int k=0; k<8; k++)
             printf("%02x ", payload[k]);
